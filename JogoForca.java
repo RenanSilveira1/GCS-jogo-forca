@@ -14,7 +14,7 @@ public class JogoForca {
         // Configurar jogo
         String[] bancoPalavras = {
             "ABACATE",
-            "MAÇÃ",
+            "PERA",
             "CEREJA",
             "MANGA",
             "MELANCIA",
@@ -52,11 +52,11 @@ public class JogoForca {
             // Revela letras, se existirem.
             boolean letraEncontrada = false;
             for (int i = 0; i < tamPalavraSorteada; i++) {
-                if (letrasEscondidas[i] == letraDigitada) {
+                if (letrasEscondidas[i] == Character.toUpperCase(letraDigitada)) {
                     letraEncontrada = true;
                     letrasReveladas[i] = letrasEscondidas[i];
                 }
-            }
+            }   
             
 			// Reduz nro de chances se letra digitada nao existir.
             if (letraEncontrada == false) {
